@@ -9,7 +9,7 @@ export default function CharacterList() {
         axios
             .get(`http://localhost:5000/api/players`)
             .then(response => {
-                setCompetitors(response.data.results);
+                setCompetitors(response.data);
             })
             .catch(error => {
                 console.log("sucks to suck", error);
